@@ -1,3 +1,3 @@
 (test
- (name utf8_streams_ocaml)
- (libraries utf8_streams_ocaml))
+ (name utf8_streams)
+ (libraries utf8_streams))
