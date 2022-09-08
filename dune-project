@@ -11,7 +11,7 @@
 
 (maintainers "Armin Heller")
 
-(license "AGPL-3.0-or-later")
+(license "Apache-2.0")
 
 (documentation https://github.com/QAhell/utf8_stream_ocaml)
 

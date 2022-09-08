@@ -6,7 +6,7 @@ description:
   "A library for encoding and decoding UTF-8 byte streams in the OCaml programming language"
 maintainer: ["Armin Heller"]
 authors: ["Armin Heller"]
-license: "AGPL-3.0-or-later"
+license: "Apache-2.0"
 tags: ["utf8"]
 homepage: "https://github.com/QAhell/utf8_stream_ocaml"
 doc: "https://github.com/QAhell/utf8_stream_ocaml"
