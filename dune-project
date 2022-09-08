@@ -1,11 +1,11 @@
 (lang dune 3.4)
 
-(name utf8_streams)
+(name utf8_stream)
 
 (generate_opam_files true)
 
 (source
- (github QAhell/utf8_streams_ocaml))
+ (github QAhell/utf8_stream_ocaml))
 
 (authors "Armin Heller")
 
@@ -13,10 +13,11 @@
 
 (license "AGPL-3.0-or-later")
 
-(documentation https://github.com/QAhell/utf8_streams_ocaml)
+(documentation https://github.com/QAhell/utf8_stream_ocaml)
 
 (package
- (name utf8_streams)
+ (name utf8_stream)
+ (version 0.1)
  (synopsis "UTF-8 encoding and decoding")
  (description "A library for encoding and decoding UTF-8 byte streams in the OCaml programming language")
  (depends ocaml dune)

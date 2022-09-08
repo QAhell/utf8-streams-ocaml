@@ -1,3 +1,4 @@
 (library
- (public_name utf8_streams)
- (name utf8_streams))
+ (public_name utf8_stream)
+ (name utf8_stream)
+ (libraries sequence))
