@@ -15,6 +15,8 @@
 
 (documentation https://github.com/QAhell/utf8_stream_ocaml)
 
+(implicit_transitive_deps false)
+
 (package
  (name utf8_stream)
  (version 0.1)

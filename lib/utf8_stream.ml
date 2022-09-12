@@ -73,7 +73,7 @@ struct
   let position t = t.position
 end
 
-module Arr_seq = Sequence.Array_sequence(struct
+module Arr_seq = Simple_sequence.Array_sequence(struct
       let allow_copy_on_resize = true
       let allow_copy_on_multiple_cons = true
     end)
