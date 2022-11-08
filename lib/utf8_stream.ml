@@ -541,6 +541,13 @@ let string_of_code_points code_points =
   String_output.to_string (List.fold_left O.put
                             (String_output.empty ()) code_points)
 
+let code_points_of_string text =
+  let rec code_points_of_bytes_rec acc input =
+    match Decoded_string_input.get input with
+      | Some (code_point, input) -> code_points_of_bytes_rec (code_point :: acc) input
+      | None -> List.rev acc in
+  code_points_of_bytes_rec [] (Decoded_string_input.of_string text)
+
 module type Code_point_input_with_of_string =
 sig
   include Code_point_input

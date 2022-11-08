@@ -271,6 +271,8 @@ val code_point_of_bytes : string -> int
 (** Converts a list of Unicode code points into a utf-8 string. *)
 val string_of_code_points : int list -> string
 
+val code_points_of_string : string -> int list
+
 module type Code_point_input_with_of_string =
 sig
   include Code_point_input
