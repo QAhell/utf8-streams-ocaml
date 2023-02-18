@@ -228,9 +228,17 @@ end
 
 module With_put_str (O : Byte_output) :
 sig
-  include module type of O
+  include module type of O with type t = O.t
 
   (** Write a whole string into the byte output stream. *)
+  val put_str : t -> string -> t
+end
+
+module Code_point_output_with_put_str (O : Code_point_output) :
+sig
+  include module type of O with type t = O.t
+
+  (** Write a whole string into the code point output stream. *)
   val put_str : t -> string -> t
 end
 

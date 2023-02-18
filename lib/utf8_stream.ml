@@ -493,6 +493,17 @@ struct
     !out
 end
 
+module Code_point_output_with_put_str (O : Code_point_output) =
+struct
+  include O
+  let put_str out s =
+    let rec walk_str input output =
+      match Decoded_string_input.get input with
+        | Some (code_point, input) -> walk_str input (O.put output code_point)
+        | None -> output in
+    walk_str (Decoded_string_input.of_string s) out
+end
+
 module Code_point_list_input =
 struct
   type t = int list

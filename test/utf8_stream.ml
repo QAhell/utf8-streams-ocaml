@@ -122,6 +122,15 @@ struct
       | _ -> assert false)
       | _ -> assert false ;;
 
+  module Sp = Code_point_output_with_put_str (Encoded_string_output)
+  let test_code_point_with_put_str () =
+    let out = Encoded_string_output.empty () in
+    let out = Sp.put_str out "abc" in
+    let out = Sp.put_str out "龍" in
+    let out = Sp.put_str out "d" in
+    let out = Sp.put_str out "" in
+    assert (Encoded_string_output.to_string out = "abc龍d") ;;
+
   let test () =
     test_position_at_start_of_input () ;
     test_string_input () ;
@@ -132,7 +141,8 @@ struct
     test_bytes_of_code_point () ;
     test_code_point_of_bytes () ;
     test_string_of_code_points () ;
-    test_buffers ()
+    test_buffers () ;
+    test_code_point_with_put_str ()
 end ;;
 
 Test.test() ;;
